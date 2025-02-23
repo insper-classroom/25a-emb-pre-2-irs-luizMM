@@ -10,8 +10,8 @@ const int OUT_PIN_G = 6;
 volatile int btn_pressed = 0;
 volatile int r_pressed = 0;
 volatile int g_pressed = 0;
-volatile int r_state = 0;
-volatile int g_state = 0;
+int r_state = 0;
+int g_state = 0;
 
 void btn_callback(uint gpio, uint32_t events){
   if (events == 0x4){
