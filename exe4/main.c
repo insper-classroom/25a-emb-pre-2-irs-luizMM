@@ -44,6 +44,7 @@ int main() {
   gpio_set_irq_enabled_with_callback(
     BTN_PIN_G, GPIO_IRQ_EDGE_RISE, true, &btn_callback);
 
+  
   while (true) {
     if (btn_pressed){
       if (r_pressed){
