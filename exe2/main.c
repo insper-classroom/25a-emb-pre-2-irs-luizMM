@@ -5,7 +5,7 @@
 const int BTN_PIN_R = 28;
 const int PIN_R_OUT = 4;
 volatile int btn_pressed = 0;
-int btn_state = 0;
+
 
 void btn_callback(uint gpio, uint32_t events){
   if (events == 0x4){
@@ -15,6 +15,8 @@ void btn_callback(uint gpio, uint32_t events){
 
 
 int main() {
+  int btn_state = 0;
+  
   stdio_init_all();
 
   gpio_init(BTN_PIN_R);
